@@ -32,24 +32,24 @@ st.plotly_chart(fig)
 fig = px.line(df, x='country_id', y='id', title="Weather Distribution with Country id and id")
 st.plotly_chart(fig)
 
-#scatterplot
-fig = px.pie(df, x="latitude", title="Pointing Weather data")
+#Pie plot
+fig = px.pie(df, names="latitude", title="Pointing Weather data")
 st.plotly_chart(fig)
 
-#boxplot
+#box plot
 fig = px.box(df, x="country_code", y="name", title="Weather category by country Code")
 st.plotly_chart(fig)
 
-#striplot
-fig = px.strip(df, x="state_code", y="longitude", title="Visualing Distribution of Weather Data")
+#Box lot
+fig = px.box(df, x="state_code", y="longitude", title="Visualing Distribution of Weather Data")
 st.plotly_chart(fig)
 
-#violin plot
-fig = px.line(df, x="country_code", y="state_code", title="Weather data by Country Code")
+#Line plot
+fig = px.histogram(df, x="country_code", nbins=20, title="Weather data by Country Code")
 st.plotly_chart(fig)
 
-#swarmplot
-fig = px.choropleth(df, geojson="country_name", locations="country_id", title="Weather data by Country Code")
+#Line plot
+fig = px.line(df, x="country_name", y="latitude", title="Weather data by Country Code")
 st.plotly_chart(fig)
 
 
