@@ -10,14 +10,9 @@ df = pd.read_csv("weatherdata.csv")
 st.dataframe(df)
 
 #class filter
-Temp=st.sidebar._multiselect('Temp_C',
+Temp=st.sidebar._multiselect('Temp',
                                options=sorted(df["Weather"].unique()),
                                default=sorted(df['Weather'].unique()))
-
-
-filtered_data = df[
-    (df['Weather'].isin(''))
-]
 
 fig = px.bar(df, x= 'Date/Time', y= 'Temp_C', title="Temperature Distribution by Month")
 st.plotly_chart(fig)
