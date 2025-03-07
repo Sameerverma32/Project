@@ -12,4 +12,4 @@ st.markdown('<h1 style="color: black; font-size: bold; text-align: center; backg
 
 image_url = "https://png.pngtree.com/template/20211103/ourmid/pngtree-weather-forecast-business-style-simple-blue-template-image_710402.png"
 
-st.markdown(f"<div style=''text-align:center;'><img src='{image_url}'></div>", unsafe_allow_html=True)
+st.markdown(f"<div style='text-align:center;'><img src='{image_url}'></div>", unsafe_allow_html=True)
